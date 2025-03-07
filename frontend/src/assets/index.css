@@ -16,6 +16,10 @@ html {
   font-size: 1rem !important;
 }
 
+.fs-tiny {
+  font-size: .8rem !important;
+}
+
 .fs-2qx {
   font-size: calc(1rem + 1.2vw) !important;
 }
@@ -39,4 +43,9 @@ html {
 
 .form-control {
   padding: .5rem 1rem !important;
+}
+
+.nav .accordion {
+  --bs-accordion-color: white !important;
+  --bs-accordion-bg: transparent !important;
 }

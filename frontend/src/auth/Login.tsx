@@ -1,12 +1,9 @@
 import { Form, Button, Card } from "react-bootstrap";
-import { FaGoogle, FaMicrosoft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Login = () => {
 	return (
-		<Card
-			className="p-5 shadow-lg rounded"
-			style={{ width: "100%", maxWidth: "400px" }}>
+		<Card className="p-5 shadow-lg rounded" style={{ width: "100%", maxWidth: "400px" }}>
 			<h2 className="text-center mb-5">
 				Sign In
 				<div className="text-gray fs-base">Welcome back again</div>
@@ -26,19 +23,28 @@ const Login = () => {
 					<Link to="/auth/forget">Forgot password</Link>
 				</div>
 			</Form>
+
 			<div className="text-center mt-3">
-				<p className="my-4">Or Sign in with</p>
+				<div className="d-flex align-items-center my-3">
+					<hr className="flex-grow-1 mx-2" />
+					<div className="text-muted">Or Sign in with</div>
+					<hr className="flex-grow-1 mx-2" />
+				</div>
+
 				<Button
 					variant="outline-danger"
-					className="w-100 mb-2 d-flex align-items-center justify-content-center">
-					<FaGoogle className="me-2" /> Sign in with Google
+					className="w-100 mb-2 d-flex align-items-center justify-content-center"
+				>
+					<i className="bi bi-google me-2"></i> Sign in with Google
 				</Button>
 				<Button
 					variant="outline-primary"
-					className="w-100 d-flex align-items-center justify-content-center">
-					<FaMicrosoft className="me-2" /> Sign in with Microsoft
+					className="w-100 d-flex align-items-center justify-content-center"
+				>
+					<i className="bi bi-microsoft me-2"></i> Sign in with Microsoft
 				</Button>
 			</div>
+
 			<p className="text-center mt-3">
 				Don't have an account? <Link to="/">Sign up</Link>
 			</p>

@@ -44,8 +44,3 @@ html {
 .form-control {
   padding: .5rem 1rem !important;
 }
-
-.nav .accordion {
-  --bs-accordion-color: white !important;
-  --bs-accordion-bg: transparent !important;
-}

@@ -5,8 +5,14 @@ import AuthLayout from "./AuthLayout";
 import Login from "./auth/Login";
 import Forget from "./auth/Forget";
 import Dashboard from "./Dashboard";
+import { useEffect } from "react";
+import useThemeStore from "@/store/useThemeStore";
 
 function App() {
+	const { theme } = useThemeStore();
+	useEffect(() => {
+		document.documentElement.setAttribute("data-theme", theme);
+	}, [theme]);
 	return (
 		<Router>
 			<Routes>

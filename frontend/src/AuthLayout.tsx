@@ -10,14 +10,13 @@ const AuthLayout = () => {
 				backgroundImage: "url('https://picsum.photos/1920/1080')",
 				backgroundSize: "cover",
 				backgroundPosition: "center",
-			}}>
+			}}
+		>
 			<Row className="h-100 g-0 ">
 				<Col
 					md={6}
-					style={{
-						backgroundColor: "rgba(0, 0, 0, 0.65)",
-					}}
-					className="p-5 vh-100 d-flex gap-5 flex-column align-items-center justify-content-center text-white">
+					className="auth-left p-5 vh-100 d-flex gap-5 flex-column align-items-center justify-content-center"
+				>
 					<div className="logo">
 						<span className="text">Roniix</span>
 					</div>
@@ -30,21 +29,20 @@ const AuthLayout = () => {
 					<div className="text-center ">
 						<h1 className="fs-2qx">Fast, Efficient and Productive</h1>
 						<p className="fs-base">
-							In this kind of post, the blogger introduces a person they've
-							interviewed and provides some background information about the
-							interviewee and their work following this is a transcript of the
-							interview.
+							In this kind of post, the blogger introduces a person they've interviewed and provides
+							some background information about the interviewee and their work following this is a
+							transcript of the interview.
 						</p>
 					</div>
 				</Col>
 
 				<Col
 					md={6}
-					style={{ backgroundColor: "rgba(255, 255, 255, 0.65)" }}
-					className="d-flex flex-column align-items-center justify-content-between">
+					className="d-flex flex-column align-items-center justify-content-between auth-main"
+				>
 					<div></div>
 					<Outlet />
-					<div className="text-center fs-base p-4">
+					<div className="text-center fs-tiny p-4">
 						Copyright Officelime Software Ltd <br />
 						Terms | Privacy Policy
 					</div>

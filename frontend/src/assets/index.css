@@ -1,17 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap');
 
+/* Light Mode Defaults */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --sidebar-bg: rgba(0, 0, 0, 0.6);
+  --main-side-bg: rgba(255, 255, 255, 0.85);
+  --auth-bg: rgba(255, 255, 255, 0.65);
+  --auth-left-bg: rgba(0, 0, 0, 0.65);
+  --btn-border: #ccc;
+}
+
+
+/* Global Styles */
 body,
 html {
   height: 100%;
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   font-size: 14px !important;
   font-weight: 400;
   font-family: Inter, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Remove Bootstrap Focus Effects */
+:focus,
+:focus-visible,
+:focus-within,
+.btn:focus,
+.btn:active,
+.form-control:focus,
+.form-select:focus,
+.navbar-toggler:focus,
+.page-link:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.auth-left {
+  background-color: var(--auth-left-bg);
+  color: white;
+}
+
+/* Typography */
 .fs-base {
   font-size: 1rem !important;
 }
@@ -34,13 +71,33 @@ html {
 }
 
 .text-gray {
-  color: gray
+  color: gray;
 }
 
+/* Buttons */
 .btn {
   padding: .5rem 1rem !important;
+  border-color: var(--btn-border);
 }
 
+/* Inputs */
 .form-control {
   padding: .5rem 1rem !important;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-color: var(--btn-border);
+}
+
+/* Layout */
+.side-bar {
+  background-color: var(--sidebar-bg);
+}
+
+.main-side {
+  flex: 1;
+  background-color: var(--main-side-bg);
+}
+
+.auth-main {
+  background-color: var(--auth-bg);
 }

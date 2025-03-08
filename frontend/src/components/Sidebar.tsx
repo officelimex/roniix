@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Nav, Accordion } from "react-bootstrap";
-import "@/assets/menu.css";
 
 interface SubmenuItem {
 	name: string;
@@ -53,12 +52,8 @@ export default function Sidebar() {
 			<div
 				style={{
 					width: "220px",
-					backgroundColor: "rgba(0, 0, 0, 0.6)",
-					display: "flex",
-					flexDirection: "column",
-					height: "100vh",
 				}}
-				className="text-white"
+				className=" vh-100 d-flex flex-column side-bar"
 			>
 				{/* Brand Area */}
 				<div className="m-4">
@@ -73,11 +68,11 @@ export default function Sidebar() {
 								<Accordion
 									key={item.name}
 									activeKey={openSubmenu === item.name ? index.toString() : null}
-									className="text-white"
+									className=""
 								>
 									<Accordion.Item eventKey={index.toString()} className="bg-transparent">
 										<Accordion.Header
-											className={`text-white ${activeMenu === item.name && "active bg-primary"}`}
+											className={` ${activeMenu === item.name && "active bg-primary"}`}
 											onClick={() => handleMenuClick(item)}
 										>
 											<i className={`${item.icon} me-3`}></i>
@@ -88,7 +83,7 @@ export default function Sidebar() {
 												{item.submenu.map((sub) => (
 													<Nav.Link
 														key={sub.name}
-														className={`text-white py-2 px-5 ${
+														className={` py-2 px-5 ${
 															activeMenu === sub.name && "active bg-secondary"
 														}`}
 														onClick={() => setActiveMenu(sub.name)}
@@ -104,7 +99,7 @@ export default function Sidebar() {
 							) : (
 								<Nav.Link
 									key={item.name}
-									className={`text-white py-2 px-3 ${activeMenu === item.name && "active bg-primary"}`}
+									className={` py-2 px-3 ${activeMenu === item.name && "active bg-primary"}`}
 									onClick={() => handleMenuClick(item)}
 								>
 									<i className={`${item.icon} me-3`}></i>

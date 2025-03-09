@@ -24,6 +24,7 @@ function App() {
 				</Route>
 				<Route path="/auth" element={<AuthLayout />}>
 					<Route index element={<Login />} />
+					<Route path="login" element={<Login />} />
 					<Route path="forget" element={<Forget />} />
 				</Route>
 			</Routes>

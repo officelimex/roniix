@@ -14,12 +14,10 @@ import (
 
 func main() {
 	config.Init()
-
 	database.Migrate()
 
 	route := gin.Default()
 
-	// Configure CORS middleware
 	route.Use(cors.New(cors.Config{
 		AllowOrigins:     []string{os.Getenv("FRONTEND_URL")},
 		AllowMethods:     []string{"GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"},
@@ -28,7 +26,8 @@ func main() {
 		AllowCredentials: true,
 	}))
 
-	endPoints := route.Group("/v1/api")
+	// Define API routes
+	endPoints := route.Group("/v1")
 	{
 		routes.AuthRouter(endPoints)
 		routes.UserRouter(endPoints)

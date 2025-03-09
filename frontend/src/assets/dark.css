@@ -25,7 +25,11 @@
   background-color: var(--main-side-bg);
 }
 
-[data-theme="dark"] .side-bar {
+[data-theme="dark"] .app-head-bg {
+  background-color: var(--bg-color);
+}
+
+[data-theme="dark"] .sidebar-gb {
   background-color: var(--sidebar-bg);
 }
 

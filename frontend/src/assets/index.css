@@ -89,13 +89,20 @@ html {
 }
 
 /* Layout */
-.side-bar {
+.sidebar-gb {
   background-color: var(--sidebar-bg);
 }
 
-.main-side {
-  flex: 1;
+.main-side-bg {
   background-color: var(--main-side-bg);
+}
+
+.app-head-bg {
+  background-color: white;
+}
+
+.main-section {
+  flex: 1;
 }
 
 .auth-main {

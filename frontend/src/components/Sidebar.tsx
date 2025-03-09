@@ -53,7 +53,7 @@ export default function Sidebar() {
 				style={{
 					width: "220px",
 				}}
-				className=" vh-100 d-flex flex-column side-bar"
+				className=" vh-100 d-flex flex-column sidebar-gb sidebar"
 			>
 				{/* Brand Area */}
 				<div className="m-4">

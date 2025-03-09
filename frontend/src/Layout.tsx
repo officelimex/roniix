@@ -16,12 +16,10 @@ const Layout: React.FC = () => {
 		>
 			<Sidebar />
 
-			<div className="d-flex flex-column justify-content-between main-side">
-				<div className="d-flex justify-content-end p-3">
-					<AppHeader />
-				</div>
+			<div className="d-flex flex-column justify-content-between main-section">
+				<AppHeader />
 
-				<div className="flex-grow-1 px-4 overflow-auto">
+				<div className="flex-grow-1 px-4 overflow-auto main-side-bg">
 					<Outlet />
 					<div className="text-center fs-tiny pb-1 fixed-bottom">
 						Copyright Officelime Software Ltd
